@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  background-image: url("../../assets/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
+  background-size: 100%;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.bannerTitle {
+  font-family: "Pacifico", cursive;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.searchForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchForm input {
+  background-color: #eee;
+  border-radius: 4px;
+  height: 40px;
+  font-size: large;
+  font-weight: 500;
+  width: 300px;
+}
+
+.searchForm input::placeholder {
+  color: #000;
+}
+
+.searchForm input:not(:first-child) {
+  margin-left: 20px;
+}
+
+.searchForm input:focus {
+  outline: none;
+}
+
+.searchForm button {
+  margin-left: 20px;
+  font-weight: 500;
+}
