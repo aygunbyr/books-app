@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Card, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Table from "react-bootstrap/Table";
 import styles from "./styles.module.css";
 
 function Book({ item }) {
@@ -47,8 +46,8 @@ function Book({ item }) {
             <strong>Title: </strong> {title} <br />
             <strong>Subtitle: </strong> {subtitle} <br />
             <strong>Authors: </strong>{" "}
-            {info.authors?.map((item) => (
-              <span>{item}, </span>
+            {info.authors?.map((item, i) => (
+              <span key={i}>{item}, </span>
             ))}
             <br />
             <strong>Published date: </strong> {info.publishedDate} <br />
