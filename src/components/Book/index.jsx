@@ -53,7 +53,6 @@ function Book({ item }) {
             <br />
             <strong>Published date: </strong> {info.publishedDate} <br />
             <strong>Description: </strong> {info.description} <br />
-            <code>{JSON.stringify(item)}</code>
           </div>
         </Modal.Body>
         <Modal.Footer>
