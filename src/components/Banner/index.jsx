@@ -30,8 +30,9 @@ function Banner() {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <Button type="submit" className="btn btn-dark">
-            <BsSearch size={20} /> Search
+          <Button type="submit" variant="dark">
+            <BsSearch />
+            &nbsp;Search
           </Button>
         </form>
       </div>

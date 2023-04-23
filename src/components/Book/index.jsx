@@ -1,27 +1,25 @@
-import { Card, Col } from "react-bootstrap";
+import { Button, Card, Col } from "react-bootstrap";
 import styles from "./styles.module.css";
 
-function index() {
+function Book({ item }) {
+  const title = item.volumeInfo.title;
+  const subtitle = item.volumeInfo.subtitle;
+  const image = item.volumeInfo.imageLinks.thumbnail;
+
   return (
     <>
-      <Col sm={4}>
+      <Col sm={6} md={4}>
         <Card className={styles.card}>
-          <img
-            src="/img/mikolaj-LV6wQnJfNRo-unsplash.jpg"
-            class="card-img-top"
-            alt="kate"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">
-              With supporting text below as a natural lead-in to additional
-              content.
-            </p>
-          </div>
+          <Card.Img variant="top" src={image} alt="book" />
+          <Card.Body>
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>{subtitle}</Card.Text>
+            <Button variant="dark">Details</Button>
+          </Card.Body>
         </Card>
       </Col>
     </>
   );
 }
 
-export default index;
+export default Book;

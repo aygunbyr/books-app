@@ -1,17 +1,17 @@
-import { Card, Col, Row } from "react-bootstrap";
-import styles from "./styles.module.css";
+import { Row } from "react-bootstrap";
 import Book from "../Book";
+import { useBooks } from "../../context/BookContext";
+import styles from "./styles.module.css";
 
 function Container() {
+  const books = useBooks();
+
   return (
     <main className={styles.results}>
       <Row>
-        <Book />
-        <Book />
-        <Book />
-        <Book />
-        <Book />
-        <Book />
+        {books?.books?.items?.map((item) => (
+          <Book key={item.id} item={item} />
+        ))}
       </Row>
     </main>
   );

@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
 .banner {
   display: flex;
   flex-direction: column;
   height: 200px;
   background-image: url("../../assets/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
   background-size: 100%;
-  border: 1px solid #000;
   text-align: center;
 }
 
 .bannerTitle {
-  font-family: "Pacifico", cursive;
+  font-family: "Cambria", sans-serif;
   margin-top: 20px;
 }
 
@@ -32,18 +29,10 @@ h1 {
 .searchForm input {
   background-color: #eee;
   border-radius: 4px;
-  height: 40px;
-  font-size: large;
+  height: 32px;
   font-weight: 500;
   width: 300px;
-}
-
-.searchForm input::placeholder {
-  color: #000;
-}
-
-.searchForm input:not(:first-child) {
-  margin-left: 20px;
+  border: 1px solid #aaa;
 }
 
 .searchForm input:focus {
@@ -51,6 +40,6 @@ h1 {
 }
 
 .searchForm button {
-  margin-left: 20px;
+  margin-left: 10px;
   font-weight: 500;
 }
