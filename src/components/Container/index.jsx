@@ -1,15 +1,16 @@
 import { Row } from "react-bootstrap";
-import Book from "../Book";
 import { useBooks } from "../../context/BookContext";
+import Book from "../Book";
 import styles from "./styles.module.css";
 
 function Container() {
   const books = useBooks();
+  const items = books?.books?.items;
 
   return (
     <main className={styles.results}>
       <Row>
-        {books?.books?.items?.map((item) => (
+        {items?.map((item) => (
           <Book key={item.id} item={item} />
         ))}
       </Row>

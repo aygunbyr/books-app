@@ -12,8 +12,6 @@ const BookProvider = ({ children }) => {
       const data = await fetchBooks(word);
 
       setBooks(data);
-
-      console.log(JSON.stringify(data));
     })();
   }, [word]);
 

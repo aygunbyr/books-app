@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./styles.module.css";
 import { Button } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
+import { useBooks } from "../../context/BookContext";
 
 function Banner() {
   const [searchText, setSearchText] = useState("");
   const searchInput = useRef();
+  const books = useBooks();
 
   useEffect(() => {
     searchInput?.current.focus();
@@ -13,7 +15,9 @@ function Banner() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(searchText);
+    if (searchText !== "") {
+      books.setWord(searchText);
+    }
   };
 
   return (
